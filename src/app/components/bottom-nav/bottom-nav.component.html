@@ -1,0 +1,25 @@
+<GridLayout columns="*, *, *, *, *" class="bottom-nav">
+  <StackLayout col="0" class="nav-item" (tap)="navigateTo('/home')">
+    <label class="material-icons home nav-icon">home</label>
+  </StackLayout>
+
+  <StackLayout col="1" class="nav-item" (tap)="navigateTo('/documents')">
+    <Label text="description" class="material-icons nav-icon"></Label>
+  </StackLayout>
+
+  <StackLayout
+    col="2"
+    class="nav-item new-request"
+    (tap)="showNewRequestModal()"
+  >
+    <Label text="add" class="material-icons plus-icon"></Label>
+  </StackLayout>
+
+  <StackLayout col="3" class="nav-item" (tap)="navigateTo('/messages')">
+    <Label text="messages" class="material-icons nav-icon"></Label>
+  </StackLayout>
+
+  <StackLayout col="4" class="nav-item" (tap)="navigateTo('/profile')">
+    <Label text="person" class="material-icons nav-icon"></Label>
+  </StackLayout>
+</GridLayout>

@@ -1,0 +1,42 @@
+.bottom-nav {
+  background-color: white;
+  height: 60;
+  border-top-width: 1;
+  border-top-color: #eef0f2;
+  padding: 0 16;
+  overflow: visible;
+}
+
+.nav-item {
+  padding: 8;
+  text-align: center;
+}
+span {
+  width: 5px;
+  font-size: 10px;
+  height: 5px;
+}
+.nav-icon {
+  font-size: 24;
+  color: #697386;
+  opacity: 0.8;
+  vertical-align: center;
+}
+
+.new-request {
+  margin-top: -20;
+}
+
+.plus-icon {
+  background-color: #4caf50;
+  color: white;
+  font-size: 24;
+  font-weight: bold;
+  width: 44;
+  height: 44;
+  border-radius: 22;
+  text-align: center;
+  vertical-align: center;
+  elevation: 4;
+  z-index: 9999;
+}

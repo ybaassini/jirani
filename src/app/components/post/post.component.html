@@ -1,0 +1,75 @@
+<StackLayout class="post">
+  <!-- En-tête du post -->
+  <GridLayout columns="auto, *, auto" class="post-header">
+    <label col="0" class="material-icons post-type-icon">public</label>
+    <Label col="1" text="Demande publique" class="post-type-text"></Label>
+    <Label col="2" [text]="post.timeAgo" class="post-time"></Label>
+  </GridLayout>
+
+  <!-- Contenu principal -->
+  <GridLayout columns="auto, *" class="post-content">
+    <!-- Avatar et badge -->
+    <StackLayout col="0" class="avatar-container">
+      <Image [src]="post.userAvatar" class="avatar"></Image>
+      <Label text="NOUVEAU" class="new-badge" *ngIf="post.isNew"></Label>
+    </StackLayout>
+
+    <!-- Informations du post -->
+    <StackLayout col="1" class="content-container">
+      <Label [text]="post.userName" class="user-name"></Label>
+      <Label [text]="post.title" class="post-title"></Label>
+      <Label
+        [text]="post.description"
+        class="post-description"
+        textWrap="true"
+      ></Label>
+
+      <!-- Détails (localisation et budget) -->
+      <StackLayout class="details-container">
+        <GridLayout columns="auto, *" class="detail-row">
+          <label col="0" class="material-icons detail-icon">location_on</label>
+          <Label
+            col="1"
+            [text]="
+              post.location.address + ' - ' + post.location.distance + ' km'
+            "
+            class="detail-text"
+          ></Label>
+        </GridLayout>
+        <GridLayout columns="auto, *" class="detail-row" *ngIf="post.budget">
+          <label col="0" class="material-icons detail-icon">euro</label>
+          <Label
+            col="1"
+            [text]="post.budget + ' €'"
+            class="detail-text price"
+          ></Label>
+        </GridLayout>
+      </StackLayout>
+
+      <Label
+        [text]="post.responses + ' réponses'"
+        class="responses"
+        (tap)="onReply()"
+      ></Label>
+    </StackLayout>
+  </GridLayout>
+
+  <!-- Actions -->
+  <GridLayout columns="*, *, *" class="actions">
+    <StackLayout col="0" class="action-btn" (tap)="onLike()">
+      <label class="material-icons action-icon">favorite_border</label>
+      <Label text="J'aime" class="action-text"></Label>
+    </StackLayout>
+
+    <StackLayout col="1" class="action-btn" (tap)="onShare()">
+      <label class="material-icons action-icon">share</label>
+      <Label text="Partager" class="action-text"></Label>
+    </StackLayout>
+
+    <StackLayout col="2" class="action-btn" (tap)="onReply()">
+      <label class="material-icons action-icon">reply</label>
+      <Label text="Répondre" class="action-text"></Label>
+    </StackLayout>
+  </GridLayout>
+  <</StackLayout
+>

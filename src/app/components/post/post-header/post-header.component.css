@@ -1,0 +1,25 @@
+.post-header {
+  padding: 16;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f2f5;
+  background-color: white;
+}
+
+.post-type-icon {
+  font-size: 20;
+  margin-right: 8;
+  color: #4caf50;
+}
+
+.post-type-text {
+  font-size: 14;
+  color: #697386;
+  font-weight: 500;
+}
+
+.post-time {
+  font-size: 14;
+  color: #697386;
+  text-align: right;
+  font-weight: 500;
+}

@@ -1,0 +1,82 @@
+/* Import Material Icons */
+@import 'material-icons/iconfont/material-icons.css';
+
+/* Colors */
+:root {
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+  --success: #059669;
+  --success-light: #d1fae5;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+}
+
+/* Typography */
+.title-lg {
+  font-size: 24;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.title {
+  font-size: 20;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 16;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.body {
+  font-size: 16;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.caption {
+  font-size: 14;
+  color: var(--text-secondary);
+}
+
+/* Components */
+.card {
+  background-color: var(--surface);
+  border-radius: 20;
+  elevation: 2;
+}
+
+.badge {
+  font-size: 12;
+  font-weight: 600;
+  padding: 4 12;
+  border-radius: 12;
+}
+
+.badge-primary {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.badge-success {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  background-color: var(--surface);
+  border-top-width: 1;
+  border-color: var(--border);
+  elevation: 8;
+}
+
+.material-icons {
+  width: 100px;
+  height: auto;
+}

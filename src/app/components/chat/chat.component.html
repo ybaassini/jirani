@@ -1,0 +1,75 @@
+<Frame>
+<Page class="chat-container">
+  <ActionBar class="action-bar" flat="true">
+    <GridLayout columns="auto, *, auto">
+      <NavigationButton text="Retour"></NavigationButton>
+      <GridLayout col="1" columns="auto, *" class="recipient-info">
+        <Image [src]="recipientAvatar" class="recipient-avatar"></Image>
+        <StackLayout col="1">
+          <Label [text]="recipientName" class="recipient-name"></Label>
+          <Label text="En ligne" class="recipient-status"></Label>
+        </StackLayout>
+      </GridLayout>
+      <Label col="2" text="more_vert" class="material-icons" style="padding: 8 16;"></Label>
+    </GridLayout>
+  </ActionBar>
+
+  <GridLayout rows="*, auto">
+    <!-- Messages List -->
+    <ListView row="0" [items]="messages" class="messages-list">
+      <ng-template let-message="item">
+        <StackLayout class="message-wrapper">
+          <!-- Date Separator -->
+          <Label *ngIf="shouldShowDate(message)" 
+                 [text]="formatMessageDate(message.timestamp)" 
+                 class="date-separator">
+          </Label>
+
+          <StackLayout [class]="message.senderId === 'me' ? 'message-bubble sent' : 'message-bubble received'">
+            <!-- Text Message -->
+            <Label *ngIf="message.content" 
+                  [text]="message.content" 
+                  class="message-text" 
+                  textWrap="true">
+            </Label>
+            
+            <!-- Image Message -->
+            <Image *ngIf="message.image" 
+                  [src]="message.image" 
+                  class="message-image" 
+                  stretch="aspectFill">
+            </Image>
+            
+            <Label [text]="formatMessageTime(message.timestamp)" 
+                  class="message-time">
+            </Label>
+          </StackLayout>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+
+    <!-- Input Area -->
+    <GridLayout row="1" columns="auto, *, auto" class="input-container">
+      <Label col="0" 
+             text="add_photo_alternate" 
+             class="material-icons action-button attach-button" 
+             (tap)="pickImage()">
+      </Label>
+      
+      <TextField col="1" 
+                [(ngModel)]="newMessage" 
+                hint="Message..." 
+                returnKeyType="send" 
+                (returnPress)="sendMessage()" 
+                class="message-input">
+      </TextField>
+      
+      <Label col="2" 
+             text="send" 
+             class="material-icons action-button send-button" 
+             (tap)="sendMessage()">
+      </Label>
+    </GridLayout>
+  </GridLayout>
+</Page>
+</Frame>

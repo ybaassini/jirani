@@ -1,0 +1,47 @@
+<ActionBar class="action-bar">
+  <GridLayout columns="auto, *, auto">
+    <Image col="0" src="~/assets/avatar-placeholder.png" class="user-avatar"></Image>
+    <Label col="1" text="Messages" class="page-title"></Label>
+    <Label col="2" text="delete" class="material-icons delete-icon" (tap)="onDeleteAll()"></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout rows="auto, *">
+  <!-- Tabs -->
+  <GridLayout row="0" columns="*, *" class="tabs">
+    <StackLayout col="0" class="tab" [class.active]="activeTab === 'messages'" (tap)="switchTab('messages')">
+      <GridLayout columns="auto, auto" class="tab-content">
+        <Label col="0" text="mail" class="material-icons tab-icon"></Label>
+        <Label col="1" [text]="'Messages ' + (unreadCount > 0 ? '(' + unreadCount + ')' : '')" class="tab-text"></Label>
+      </GridLayout>
+      <Label class="tab-indicator" [class.active]="activeTab === 'messages'"></Label>
+    </StackLayout>
+    
+    <StackLayout col="1" class="tab" [class.active]="activeTab === 'notifications'" (tap)="switchTab('notifications')">
+      <GridLayout columns="auto, auto" class="tab-content">
+        <Label col="0" text="notifications" class="material-icons tab-icon"></Label>
+        <Label col="1" [text]="'Notifications ' + (notificationCount > 0 ? '(' + notificationCount + ')' : '')" class="tab-text"></Label>
+      </GridLayout>
+      <Label class="tab-indicator" [class.active]="activeTab === 'notifications'"></Label>
+    </StackLayout>
+  </GridLayout>
+
+  <!-- Message List -->
+  <ListView row="1" [items]="filteredMessages" class="message-list">
+    <ng-template let-message="item">
+      <GridLayout columns="auto, *, auto" class="message-item" [class.unread]="!message.isRead">
+        <StackLayout col="0" class="icon-container">
+          <Label [text]="message.type === 'message' ? 'mail' : 'notifications'" class="material-icons message-icon"></Label>
+        </StackLayout>
+        <StackLayout col="1" class="message-content">
+          <Label [text]="message.title" class="message-title" textWrap="true"></Label>
+          <Label [text]="message.content" class="message-text" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout col="2" class="message-actions">
+          <Label [text]="message.date" class="message-date"></Label>
+          <Label text="delete_outline" class="material-icons delete-message" (tap)="deleteMessage(message.id)"></Label>
+        </StackLayout>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>

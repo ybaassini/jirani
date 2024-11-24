@@ -1,0 +1,161 @@
+.container {
+  padding: 15;
+}
+
+.title {
+  font-size: 18;
+  font-weight: bold;
+  color: #333;
+}
+
+.request-header {
+  margin-bottom: 15;
+}
+
+.user-avatar {
+  width: 50;
+  height: 50;
+  border-radius: 25;
+  margin-right: 10;
+}
+
+.user-name {
+  font-size: 16;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-time {
+  font-size: 14;
+  color: #666;
+}
+
+.request-details {
+  background-color: white;
+  border-radius: 10;
+  padding: 15;
+  margin-bottom: 20;
+}
+
+.description {
+  font-size: 16;
+  color: #333;
+  margin-bottom: 15;
+}
+
+.info-row {
+  margin-bottom: 8;
+}
+
+.icon {
+  font-size: 18;
+  margin-right: 10;
+}
+
+.info-text {
+  font-size: 14;
+  color: #666;
+}
+
+.providers-section {
+  margin-top: 20;
+}
+
+.section-title {
+  font-size: 18;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15;
+}
+
+.provider-card {
+  background-color: white;
+  border-radius: 10;
+  padding: 15;
+  margin-bottom: 15;
+}
+
+.provider-header {
+  margin-bottom: 12;
+}
+
+.provider-avatar {
+  width: 40;
+  height: 40;
+  border-radius: 20;
+  margin-right: 10;
+}
+
+.provider-name {
+  font-size: 16;
+  font-weight: bold;
+  color: #333;
+  margin-right: 5;
+}
+
+.verified-badge {
+  color: #4CAF50;
+  font-size: 16;
+}
+
+.provider-stats {
+  margin-top: 4;
+}
+
+.rating {
+  font-size: 14;
+  color: #666;
+  margin-right: 2;
+}
+
+.star {
+  font-size: 14;
+  margin-right: 5;
+}
+
+.jobs-count {
+  font-size: 14;
+  color: #666;
+}
+
+.response-time {
+  font-size: 12;
+  color: #999;
+}
+
+.provider-content {
+  margin-left: 50;
+}
+
+.provider-message {
+  font-size: 14;
+  color: #333;
+  margin-bottom: 10;
+}
+
+.price-row {
+  margin-top: 10;
+  margin-bottom: 15;
+}
+
+.price-label {
+  font-size: 14;
+  color: #666;
+}
+
+.price-value {
+  font-size: 16;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: right;
+}
+
+.contact-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14;
+  font-weight: bold;
+  padding: 10 20;
+  border-radius: 5;
+  margin-top: 10;
+}

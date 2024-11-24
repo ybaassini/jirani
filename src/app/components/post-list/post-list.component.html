@@ -1,0 +1,36 @@
+<ActionBar class="action-bar">
+  <GridLayout columns="auto, *, auto">
+    <StackLayout col="0">
+      <Image src="~/assets/avatar-placeholder.png" class="logo"></Image>
+    </StackLayout>
+    <StackLayout col="1">
+      <Label text="Le Petit-Quevilly (l'Hopital)" class="location-text"></Label>
+    </StackLayout>
+    <StackLayout col="2">
+      <Label
+        text="notifications"
+        class="material-icons notification-icon"
+      ></Label>
+    </StackLayout>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout rows="auto, *">
+  <!-- Nouveau bouton de demande -->
+  <GridLayout row="0" class="new-request-button" (tap)="showNewRequestModal()">
+    <GridLayout columns="auto, *" class="new-request-content">
+      <Label col="0" text="add_circle" class="material-icons new-request-icon"></Label>
+      <StackLayout col="1">
+        <Label text="De quoi avez-vous besoin aujourd'hui ?" class="new-request-text"></Label>
+        <Label text="Créer une nouvelle demande" class="new-request-hint"></Label>
+      </StackLayout>
+    </GridLayout>
+  </GridLayout>
+
+  <!-- Liste des posts -->
+  <ListView row="1" [items]="posts" class="post-list">
+    <ng-template let-post="item">
+      <app-post [post]="post"></app-post>
+    </ng-template>
+  </ListView>
+</GridLayout>

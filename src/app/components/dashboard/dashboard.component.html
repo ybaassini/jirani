@@ -1,0 +1,88 @@
+<ActionBar class="action-bar">
+  <GridLayout columns="*, auto">
+    <Image col="0" src="~/assets/logo.png" class="logo"></Image>
+    <Label col="1" text="🔔" class="notification-icon"></Label>
+  </GridLayout>
+</ActionBar>
+
+<ScrollView>
+  <StackLayout class="dashboard">
+    <Label text="Overview" class="section-title"></Label>
+
+    <GridLayout columns="*, *" rows="auto, auto" class="stats-grid">
+      <!-- Carte des revenus avec graphique -->
+      <StackLayout col="0" row="0" class="stats-card revenue-card">
+        <Label [text]="formatCurrency(totalReceived)" class="amount-text"></Label>
+        <Label text="Received" class="label-text"></Label>
+        <CartesianChart [series]="chartData.series" height="100">
+          <LineSeries tkCartesianSeries
+            [items]="chartData.series[0].data"
+            categoryProperty="category"
+            valueProperty="value">
+          </LineSeries>
+          <LinearAxis tkCartesianVerticalAxis hidden="true"></LinearAxis>
+          <CategoryAxis tkCartesianHorizontalAxis 
+            [categories]="chartData.categories"
+            labelSize="12"
+            labelTextColor="#999">
+          </CategoryAxis>
+        </CartesianChart>
+      </StackLayout>
+
+      <!-- Statistiques -->
+      <GridLayout col="1" row="0" rows="*, *" class="stats-container">
+        <StackLayout row="0" class="stats-card">
+          <Label [text]="pendingCount" class="stats-number"></Label>
+          <Label text="Pending" class="label-text"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="stats-card">
+          <Label [text]="unpaidCount" class="stats-number"></Label>
+          <Label text="Unpaid" class="label-text"></Label>
+        </StackLayout>
+      </GridLayout>
+
+      <!-- Carte Upgrade -->
+      <StackLayout col="0" row="1" colSpan="2" class="upgrade-card" (tap)="onUpgradeEnterprise()">
+        <Label text="Upgrade to Enterprise" class="upgrade-title"></Label>
+        <Label text="Scale your business with pro feature." class="upgrade-subtitle"></Label>
+        <Label text="→" class="upgrade-arrow"></Label>
+      </StackLayout>
+    </GridLayout>
+
+    <!-- Activité récente -->
+    <GridLayout rows="auto, auto" class="recent-activity">
+      <GridLayout row="0" columns="*, auto" class="section-header">
+        <Label col="0" text="Recent Activity" class="section-title"></Label>
+        <Label col="1" text="..." class="more-options"></Label>
+      </GridLayout>
+
+      <StackLayout row="1">
+        <StackLayout *ngFor="let transaction of recentTransactions" class="transaction-card">
+          <GridLayout columns="auto, *, auto" rows="auto, auto">
+            <!-- Avatar et infos utilisateur -->
+            <Image [src]="transaction.user.avatar" class="user-avatar" rowSpan="2"></Image>
+            <StackLayout col="1" row="0">
+              <Label [text]="transaction.user.name" class="user-name"></Label>
+              <Label [text]="transaction.user.email" class="user-email"></Label>
+            </StackLayout>
+
+            <!-- Montant et statut -->
+            <StackLayout col="2" row="0" rowSpan="2" class="amount-container">
+              <Label [text]="formatCurrency(transaction.amount)" class="transaction-amount"></Label>
+              <Label [text]="transaction.status" 
+                     [class]="transaction.status.toLowerCase()" 
+                     class="status-badge">
+              </Label>
+            </StackLayout>
+
+            <!-- ID et date -->
+            <StackLayout col="1" row="1" class="transaction-details">
+              <Label [text]="transaction.id" class="transaction-id"></Label>
+              <Label [text]="transaction.date" class="transaction-date"></Label>
+            </StackLayout>
+          </GridLayout>
+        </StackLayout>
+      </StackLayout>
+    </GridLayout>
+  </StackLayout>
+</ScrollView>

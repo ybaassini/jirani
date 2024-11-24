@@ -1,0 +1,32 @@
+<GridLayout rows="auto, *" class="modal-container">
+  <GridLayout row="0" columns="*, auto" class="modal-header">
+    <Label col="0" text="Nouvelle demande" class="modal-title"></Label>
+    <Label col="1" text="close" class="material-icons close-button" (tap)="close()"></Label>
+  </GridLayout>
+
+  <ScrollView row="1" class="modal-content">
+    <StackLayout>
+      <StackLayout class="input-group">
+        <Label text="Titre" class="label"></Label>
+        <TextField hint="Entrez le titre de votre demande" class="input"></TextField>
+      </StackLayout>
+
+      <StackLayout class="input-group">
+        <Label text="Catégorie" class="label"></Label>
+        <TextField hint="Sélectionnez une catégorie" class="input"></TextField>
+      </StackLayout>
+
+      <StackLayout class="input-group">
+        <Label text="Description" class="label"></Label>
+        <TextView hint="Décrivez votre demande en détail" class="input description"></TextView>
+      </StackLayout>
+
+      <StackLayout class="input-group">
+        <Label text="Budget (optionnel)" class="label"></Label>
+        <TextField keyboardType="number" hint="0 €" class="input"></TextField>
+      </StackLayout>
+
+      <Button text="Publier la demande" class="submit-button" (tap)="submit($event)"></Button>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

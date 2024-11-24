@@ -1,0 +1,12 @@
+/* Import global styles */
+@import './styles.css';
+
+/* App specific styles */
+Page {
+  background-color: #f5f7fa;
+}
+
+ActionBar {
+  background-color: white;
+  color: #1a1f36;
+}

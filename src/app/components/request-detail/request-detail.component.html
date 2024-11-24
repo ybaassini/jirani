@@ -1,0 +1,70 @@
+<ActionBar class="action-bar">
+  <NavigationButton text="Retour" android.systemIcon="ic_menu_back"></NavigationButton>
+  <Label [text]="post.title" class="title"></Label>
+</ActionBar>
+
+<ScrollView>
+  <StackLayout class="container">
+    <!-- Détails de la demande -->
+    <GridLayout rows="auto, auto" columns="auto, *" class="request-header">
+      <Image [src]="post.userAvatar" class="user-avatar" row="0" col="0" rowSpan="2"></Image>
+      <Label [text]="post.userName" class="user-name" row="0" col="1"></Label>
+      <Label [text]="post.timeAgo" class="post-time" row="1" col="1"></Label>
+    </GridLayout>
+
+    <StackLayout class="request-details">
+      <Label [text]="post.description" textWrap="true" class="description"></Label>
+      
+      <GridLayout columns="auto, *" class="info-row">
+        <Label text="📍" class="icon"></Label>
+        <Label [text]="post.location.address + ' (' + post.location.distance + ' km)'" class="info-text" col="1"></Label>
+      </GridLayout>
+
+      <GridLayout columns="auto, *" class="info-row">
+        <Label text="💰" class="icon"></Label>
+        <Label [text]="post.budget + ' €'" class="info-text" col="1"></Label>
+      </GridLayout>
+
+      <GridLayout columns="auto, *" class="info-row">
+        <Label text="📅" class="icon"></Label>
+        <Label [text]="post.timeAgo" class="info-text" col="1"></Label>
+      </GridLayout>
+    </StackLayout>
+
+    <!-- Liste des offreurs -->
+    <StackLayout class="providers-section">
+      <Label text="Réponses" class="section-title"></Label>
+      
+      <StackLayout *ngFor="let provider of providers" class="provider-card">
+        <GridLayout rows="auto, auto" columns="auto, *, auto" class="provider-header">
+          <Image [src]="provider.avatar" class="provider-avatar" row="0" col="0" rowSpan="2"></Image>
+          
+          <GridLayout rows="auto, auto" col="1">
+            <StackLayout row="0" orientation="horizontal">
+              <Label [text]="provider.name" class="provider-name"></Label>
+              <Label text="✓" class="verified-badge" *ngIf="provider.verifiedProfile"></Label>
+            </StackLayout>
+            <StackLayout row="1" orientation="horizontal" class="provider-stats">
+              <Label [text]="provider.rating" class="rating"></Label>
+              <Label text="⭐" class="star"></Label>
+              <Label [text]="'(' + provider.completedJobs + ' services)'" class="jobs-count"></Label>
+            </StackLayout>
+          </GridLayout>
+
+          <Label [text]="provider.responseDate" class="response-time" row="0" col="2"></Label>
+        </GridLayout>
+
+        <StackLayout class="provider-content">
+          <Label [text]="provider.message" textWrap="true" class="provider-message"></Label>
+          
+          <GridLayout columns="auto, *" class="price-row" *ngIf="provider.price">
+            <Label text="Prix proposé:" class="price-label"></Label>
+            <Label [text]="provider.price + ' €'" class="price-value" col="1"></Label>
+          </GridLayout>
+
+          <Button text="Contacter" class="contact-button" (tap)="contactProvider(provider)"></Button>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+</ScrollView>

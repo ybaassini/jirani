@@ -1,0 +1,28 @@
+.post-actions {
+  background-color: white;
+  border-top-width: 1;
+  border-top-color: #f0f2f5;
+  padding: 12 16;
+}
+
+.action-item {
+  horizontal-align: center;
+}
+
+.action-icon {
+  font-size: 22;
+  margin-bottom: 4;
+  color: #697386;
+}
+
+.action-text {
+  color: #697386;
+  font-size: 12;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5;
+}
+
+.action-item:active {
+  opacity: 0.7;
+}

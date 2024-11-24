@@ -1,0 +1,136 @@
+.post {
+  margin: 5 8;
+  background-color: white;
+  border-radius: 20;
+  elevation: 2;
+}
+
+.post-header {
+  padding: 12 16;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f2f5;
+}
+
+.avatar {
+  width: 44;
+  height: 44;
+  border-radius: 22;
+  margin-right: 12;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 15;
+  font-weight: 600;
+  color: #1a1f36;
+  margin-bottom: 2;
+}
+
+.post-meta {
+  flex-direction: row;
+  align-items: center;
+}
+
+.post-type {
+  font-size: 13;
+  color: #697386;
+  margin-right: 8;
+}
+
+.post-time {
+  font-size: 13;
+  color: #697386;
+}
+
+.post-content {
+  padding: 16;
+}
+
+.post-title {
+  font-size: 17;
+  font-weight: 600;
+  color: #1a1f36;
+  margin-bottom: 8;
+}
+
+.post-description {
+  font-size: 15;
+  color: #1a1f36;
+  margin-bottom: 16;
+  line-height: 1.4;
+}
+
+.info-container {
+  background-color: white;
+  border-radius: 16;
+  padding: 12;
+  margin-bottom: 12;
+}
+
+.info-row {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-icon {
+  color: #4caf50;
+  margin-right: 8;
+  font-size: 18;
+}
+
+.info-text {
+  font-size: 14;
+  color: #697386;
+  flex: 1;
+}
+
+.price {
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.responses {
+  font-size: 14;
+  color: #697386;
+  margin-top: 8;
+}
+
+.actions {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 12 16;
+  background-color: white;
+  border-top-width: 1;
+  border-color: #f0f2f5;
+}
+
+.action-btn {
+  flex-direction: row;
+  align-items: center;
+  padding: 8 12;
+  border-radius: 8;
+}
+
+.action-btn:active {
+  background-color: #e2e8f0;
+}
+
+.action-icon {
+  color: #697386;
+  margin-right: 6;
+  font-size: 20;
+}
+
+.action-text {
+  color: #697386;
+  font-size: 13;
+  font-weight: 500;
+}

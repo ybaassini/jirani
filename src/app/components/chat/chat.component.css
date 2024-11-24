@@ -1,0 +1,127 @@
+.chat-container {
+  background-color: #f0f2f5;
+}
+
+.action-bar {
+  background-color: white;
+  elevation: 4;
+}
+
+.recipient-info {
+  padding: 8 16;
+  margin-left: 8;
+}
+
+.recipient-avatar {
+  width: 36;
+  height: 36;
+  border-radius: 18;
+  margin-right: 12;
+  border-width: 2;
+  border-color: #4caf50;
+}
+
+.recipient-name {
+  font-size: 16;
+  font-weight: 600;
+  color: #1a1f36;
+}
+
+.recipient-status {
+  font-size: 12;
+  color: #4caf50;
+  margin-top: 2;
+}
+
+.messages-list {
+  padding: 16 12;
+}
+
+.message-wrapper {
+  margin: 8 0;
+}
+
+.message-bubble {
+  padding: 12 16;
+  max-width: 80%;
+  border-radius: 18;
+}
+
+.message-bubble.received {
+  background-color: white;
+  border-top-left-radius: 4;
+  margin-right: 20%;
+  elevation: 1;
+}
+
+.message-bubble.sent {
+  background-color: #e7f5e8;
+  border-top-right-radius: 4;
+  margin-left: 20%;
+  elevation: 1;
+}
+
+.message-text {
+  font-size: 15;
+  line-height: 1.4;
+  color: #1a1f36;
+}
+
+.message-bubble.sent .message-text {
+  color: #1a1f36;
+}
+
+.message-time {
+  font-size: 11;
+  opacity: 0.7;
+  margin-top: 4;
+  text-align: right;
+}
+
+.message-image {
+  border-radius: 12;
+  margin: 4 0;
+  width: 200;
+  height: 200;
+}
+
+.date-separator {
+  text-align: center;
+  color: #65676b;
+  font-size: 12;
+  margin: 16 0;
+}
+
+.input-container {
+  background-color: white;
+  padding: 12 16;
+  elevation: 8;
+}
+
+.message-input {
+  background-color: #f0f2f5;
+  padding: 12 16;
+  border-radius: 24;
+  font-size: 15;
+  margin: 0 8;
+  placeholder-color: #65676b;
+  height: 44;
+}
+
+.action-button {
+  width: 38;
+  height: 38;
+  border-radius: 19;
+  font-size: 20;
+  text-align: center;
+  vertical-align: center;
+}
+
+.send-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.attach-button {
+  color: #4caf50;
+}

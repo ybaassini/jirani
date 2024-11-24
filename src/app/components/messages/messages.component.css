@@ -1,0 +1,135 @@
+.action-bar {
+  background-color: white;
+  elevation: 4;
+}
+
+.user-avatar {
+  width: 40;
+  height: 40;
+  border-radius: 20;
+  margin: 8;
+}
+
+.page-title {
+  font-size: 20;
+  font-weight: bold;
+  text-align: center;
+  color: #1a1f36;
+}
+
+.delete-icon {
+  font-size: 24;
+  padding: 8;
+  color: #697386;
+}
+
+.tabs {
+  background-color: white;
+  padding: 0;
+  elevation: 2;
+  border-bottom-width: 1;
+  border-bottom-color: #f0f2f5;
+}
+
+.tab {
+  padding: 16 8;
+}
+
+.tab-content {
+  padding: 0 16;
+}
+
+.tab-icon {
+  font-size: 20;
+  color: #697386;
+  margin-right: 8;
+}
+
+.tab-text {
+  font-size: 14;
+  color: #697386;
+  font-weight: 500;
+}
+
+.tab.active .tab-icon,
+.tab.active .tab-text {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.tab-indicator {
+  height: 2;
+  background-color: transparent;
+  margin-top: 8;
+}
+
+.tab-indicator.active {
+  background-color: #4CAF50;
+}
+
+.message-list {
+  background-color: #f5f7fa;
+}
+
+.message-item {
+  background-color: white;
+  margin: 8 16;
+  padding: 16;
+  border-radius: 16;
+  elevation: 1;
+}
+
+.message-item.unread {
+  background-color: #f0f9ff;
+}
+
+.icon-container {
+  width: 40;
+  height: 40;
+  margin-right: 12;
+  background-color: #f8fafc;
+  border-radius: 20;
+}
+
+.message-icon {
+  font-size: 20;
+  text-align: center;
+  vertical-align: center;
+  color: #4CAF50;
+  padding: 10;
+}
+
+.message-content {
+  margin-right: 12;
+}
+
+.message-title {
+  font-size: 15;
+  font-weight: bold;
+  color: #1a1f36;
+  margin-bottom: 4;
+}
+
+.message-text {
+  font-size: 14;
+  color: #697386;
+  line-height: 1.4;
+}
+
+.message-actions {
+  min-width: 60;
+}
+
+.message-date {
+  font-size: 12;
+  color: #697386;
+  text-align: right;
+  margin-bottom: 8;
+}
+
+.delete-message {
+  font-size: 20;
+  color: #dc2626;
+  text-align: right;
+  opacity: 0.7;
+}

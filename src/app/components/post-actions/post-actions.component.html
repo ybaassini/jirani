@@ -1,0 +1,16 @@
+<GridLayout columns="*, *, *" class="post-actions">
+  <StackLayout col="0" class="action-item" (tap)="onLike()">
+    <Label text="favorite_border" class="material-icons action-icon"></Label>
+    <Label text="J'aime" class="action-text"></Label>
+  </StackLayout>
+  
+  <StackLayout col="1" class="action-item" (tap)="onRecommend()">
+    <Label text="share" class="material-icons action-icon"></Label>
+    <Label text="Recommander" class="action-text"></Label>
+  </StackLayout>
+  
+  <StackLayout col="2" class="action-item" (tap)="onReply()">
+    <Label text="reply" class="material-icons action-icon"></Label>
+    <Label text="Répondre" class="action-text"></Label>
+  </StackLayout>
+</GridLayout>

@@ -1,0 +1,34 @@
+<FlexboxLayout>
+
+  <GridLayout>
+      <StackLayout col="0" class="avatar-container">
+    <Image [src]="post.userAvatar" class="avatar"></Image>
+    <Label text="NOUVEAU" class="new-badge" *ngIf="post.isNew"></Label>
+  </StackLayout>
+  </GridLayout>  
+
+<GridLayout columns="auto, *" class="post-content">
+
+
+  <StackLayout col="1" class="post-info">
+    <Label [text]="post.userName" class="user-name"></Label>
+    <Label [text]="post.title" class="post-title"></Label>
+    <Label [text]="post.description" textWrap="true" class="post-description"></Label>
+    
+    <StackLayout class="post-details">
+      <GridLayout columns="auto, *" class="detail-row">
+        <Label col="0" text="location_on" class="material-icons detail-icon"></Label>
+        <Label col="1" [text]="post.location.address + ' - ' + post.location.distance + ' km'" class="detail-text"></Label>
+      </GridLayout>
+      <GridLayout columns="auto, *" class="detail-row" *ngIf="post.budget">
+        <Label col="0" text="euro" class="material-icons detail-icon"></Label>
+        <Label col="1" [text]="post.budget + ' €'" class="detail-text budget"></Label>
+      </GridLayout>
+    </StackLayout>
+    
+    <Label [text]="post.responses + ' réponses'" class="responses-count"></Label>
+  </StackLayout>
+</GridLayout>
+
+  
+</FlexboxLayout>

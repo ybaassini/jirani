@@ -1,0 +1,157 @@
+.dashboard {
+  padding: 16;
+  background-color: #f5f7fa;
+}
+
+.logo {
+  height: 30;
+}
+
+.notification-icon {
+  font-size: 24;
+  padding: 8;
+}
+
+.section-title {
+  font-size: 20;
+  font-weight: bold;
+  color: #1a1f36;
+  margin: 16 0;
+}
+
+.stats-grid {
+  margin-bottom: 16;
+}
+
+.stats-card {
+  background-color: white;
+  border-radius: 16;
+  padding: 16;
+  margin: 4;
+  elevation: 2;
+}
+
+.revenue-card {
+  padding-bottom: 0;
+}
+
+.amount-text {
+  font-size: 24;
+  font-weight: bold;
+  color: #1a1f36;
+  margin-bottom: 4;
+}
+
+.label-text {
+  font-size: 14;
+  color: #697386;
+}
+
+.stats-number {
+  font-size: 28;
+  font-weight: bold;
+  color: #1a1f36;
+  margin-bottom: 4;
+}
+
+.upgrade-card {
+  background-color: #1a1f36;
+  border-radius: 16;
+  padding: 20;
+  margin: 4;
+  color: white;
+}
+
+.upgrade-title {
+  font-size: 18;
+  font-weight: bold;
+  margin-bottom: 4;
+}
+
+.upgrade-subtitle {
+  font-size: 14;
+  opacity: 0.8;
+}
+
+.upgrade-arrow {
+  font-size: 24;
+  text-align: right;
+  margin-top: 8;
+}
+
+.section-header {
+  margin: 16 0;
+}
+
+.more-options {
+  font-size: 20;
+  color: #697386;
+}
+
+.transaction-card {
+  background-color: white;
+  border-radius: 16;
+  padding: 16;
+  margin-bottom: 8;
+  elevation: 2;
+}
+
+.user-avatar {
+  width: 40;
+  height: 40;
+  border-radius: 20;
+  margin-right: 12;
+}
+
+.user-name {
+  font-size: 16;
+  font-weight: bold;
+  color: #1a1f36;
+}
+
+.user-email {
+  font-size: 14;
+  color: #697386;
+}
+
+.amount-container {
+  text-align: right;
+}
+
+.transaction-amount {
+  font-size: 16;
+  font-weight: bold;
+  color: #1a1f36;
+  margin-bottom: 4;
+}
+
+.status-badge {
+  font-size: 12;
+  padding: 4 8;
+  border-radius: 12;
+  text-align: center;
+}
+
+.paid {
+  background-color: #ecfdf3;
+  color: #027a48;
+}
+
+.pending {
+  background-color: #fff8f3;
+  color: #c4320a;
+}
+
+.transaction-details {
+  margin-top: 4;
+}
+
+.transaction-id {
+  font-size: 14;
+  color: #1a1f36;
+}
+
+.transaction-date {
+  font-size: 12;
+  color: #697386;
+}
